@@ -1,0 +1,28 @@
+{
+  "name": "vcm-components-list-template",
+  "main": "index.js",
+  "repository": "git@github.com:dev-your-ops/vcm-components-list-template.git",
+  "author": "marc <marc.nalpas@epitech.eu>",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "node-sass": "^4.14.1",
+    "prismjs": "^1.22.0",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "^10.0.4",
+    "tailwindcss": "^1.9.6",
+    "vue": "^2.6.11",
+    "vue-prism-component": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
