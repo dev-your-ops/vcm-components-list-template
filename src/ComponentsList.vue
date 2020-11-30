@@ -5,13 +5,7 @@
       <hr />
 
       <div class="flex items-center mt-3">
-        <Input
-          placeholder="Search"
-          :value="search"
-          @change="({value}) => (search = value)"
-          name="search"
-          class="w-full"
-        />
+        <input placeholder="Search" v-model="search" class="w-full" />
         <i
           class="fas fa-times text-red-500 fa-2x ml-2 cursor-pointer"
           @click="search = ''"
@@ -57,8 +51,13 @@
 </template>
 
 <script>
+import docsJson from '../../docs.json';
+
 export default {
-  name: 'Components',
+  name: 'ComponentsList',
+  created() {
+    console.log(docsJson);
+  },
   computed: {
     componentsList() {
       return this.components.filter((e) => e.tags.includes(this.search));
@@ -87,13 +86,7 @@ export default {
     return {
       myList: [],
       search: '',
-      components: [
-        {id: 1, title: 'Buttons', tags: 'button btn', desc: ButtonDesc},
-        {id: 2, title: 'Form', tags: 'form input', desc: FormDesc},
-        {id: 3, title: 'Spinner', tags: 'spinner loading', desc: SpinnerDesc},
-        {id: 4, title: 'Prism', tags: 'prism code', desc: PrismDesc},
-        {id: 5, title: 'Badges', tags: 'badge tag', desc: BadgeDesc},
-      ],
+      components: docsJson,
     };
   },
 };

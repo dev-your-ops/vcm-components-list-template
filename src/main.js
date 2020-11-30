@@ -4,6 +4,8 @@ import App from './App.vue';
 // import tailwaindcss
 import './assets/styles/index.css';
 
+import '../../index.js';
+
 Vue.config.productionTip = false;
 
 new Vue({

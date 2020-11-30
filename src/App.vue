@@ -1,12 +1,13 @@
 <template>
-  <div id="app"></div>
+  <div id="app"><ComponentsList /></div>
 </template>
 
 <script>
-import Components from './Components';
+import ComponentsList from './ComponentsList';
 
 export default {
   name: 'App',
+  components: {ComponentsList},
 };
 </script>
 
